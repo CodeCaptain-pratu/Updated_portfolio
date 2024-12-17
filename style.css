@@ -11,6 +11,10 @@ html,body{
 body{
     overflow-x: hidden;
 }
+:root{
+    --primaryColor: #38BDF8;
+}
+/* main section */
 #main{
     width:100%;
     height:100%;
@@ -21,7 +25,9 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
+/* nav section */
 #nav{
+    /* border:2px solid red; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +38,7 @@ body{
 #nav i{
     font-size: 1.2rem;
 }
+/* sidebar section */
 #full{
     position: absolute;
     background-color: #00000050;
@@ -52,6 +59,10 @@ body{
     font-size: 1.5rem;
     padding: 10px;
     color:#fff;
+    transition: 0.3s;
+}
+#full li a:hover{
+    color: var(--primaryColor);
 }
 #full i{
     color:#fff;
@@ -59,4 +70,25 @@ body{
     top:5%;
     right:5%;
     font-size: 1.5rem;
+}
+/* content styling */
+#content{
+    width:100%;
+    height:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+    padding: 20px;
+    text-align: center;
+    /* white-space: nowrap; */
+    text-transform: capitalize;
+}
+#content h1{
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+#content h1 span{
+    display: inline-block;
 }
