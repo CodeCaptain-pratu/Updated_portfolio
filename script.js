@@ -34,6 +34,14 @@ gsap.from("#content h1 .b",{
     opacity:0,
     stagger:-0.15,
 })
+// nav animation 
+var tl2=gsap.timeline();
+tl2.from("#nav",{
+    y:-100,
+    opacity:0,
+    duration:1,
+    delay:0.2,
+})
 
 tl.to("#full", {
   right: 0,
