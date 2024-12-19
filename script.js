@@ -75,8 +75,15 @@ let center=document.querySelector("#center");
 gsap.from(center,{
   opacity:0,
   duration:2,
-  delay:1,
-  color:"#002730",
-  // scrollTrigger:package;
-  // x:-1009,
+  scale:1.5,
+  color:"#002740",
+  scrollTrigger:{
+    trigger:"#center",
+    scroller:"body",
+    // markers:true,
+    start:"top 60%",
+    end:"top 30%",
+    scrub:true,
+    // pin:true,
+  }
 })
