@@ -9,6 +9,9 @@ function breakTheText() {
   let clutter = "";
   let halfValue=Math.floor(splittedText.length/2);
   splittedText.forEach(function (elem,idx) {
+    if(elem===" "){
+      elem="&nbsp;";
+    }
     if(idx<halfValue){
         clutter += `<span class="a">${elem}</span>`;
     }
@@ -43,6 +46,8 @@ tl2.from("#nav",{
     delay:0.2,
 })
 
+// sidebar animation 
+
 tl.to("#full", {
   right: 0,
   duration: 0.7,
@@ -66,4 +71,12 @@ close.addEventListener("click", function () {
   tl.reverse();
 });
 
-// consitency is the bridge between goalsa and success, built one small step at a time
+let center=document.querySelector("#center");
+gsap.from(center,{
+  opacity:0,
+  duration:2,
+  delay:1,
+  color:"#002730",
+  // scrollTrigger:package;
+  // x:-1009,
+})
